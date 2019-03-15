@@ -1,0 +1,22 @@
+{
+  "name": "node_ip",
+  "version": "1.0.0",
+  "description": "No description",
+  "main": "index.js",
+  "scripts": {
+    "start": "node web.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "get-docker-host": "^1.0.3",
+    "is-in-docker": "^0.1.2"
+  },
+  "devDependencies": {},
+  "repository": "git+https://github.com/jshahbazi/node_ip.git",
+  "bugs": {
+    "url": "https://github.com/jshahbazi/node_ip/issues"
+  },
+  "homepage": "https://github.com/jshahbazi/node_ip#readme"
+}
