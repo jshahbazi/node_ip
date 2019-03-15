@@ -17,12 +17,21 @@ checkDocker = () => {
     });
 };
 
-checkDocker().then((addr) => {
-    if (addr) {
-        console.log('Docker host is ' + addr);
-    } else {
-        console.log('Not in Docker');
-    }
-}).catch((error) => {
-    console.log('Could not find Docker host: ' + error);
+
+var express = require('express');
+var app = express();
+app.get('/', function (req, res) {
+    checkDocker().then((addr) => {
+        if (addr) {
+            res.send('Docker host is ' + addr);
+        } else {
+            res.send('Not in Docker');
+        }
+    }).catch((error) => {
+        console.log('Could not find Docker host: ' + error);
+    });
+    
+});
+app.listen(8080, function () {
+  console.log('Example app listening on port 8080!');
 });
